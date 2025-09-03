@@ -1,0 +1,24 @@
+Left-start and right-end 
+1.Farmer takes Goat to Right.
+  Wolf, Cabbage | Farmer, Goat
+
+2.Farmer returns alone to Left.
+  Farmer , Wolf ,Cabbage | Goat
+
+3.Farmer takes Wolf to Right.
+  Cabbage | Farmer ,Wolf ,Goat ← temporarily farmer and wolf on Right with goat also there — that would be bad if farmer left them, so we          immediately do step 4.
+
+4.Farmer brings Goat back to Left.
+  Farmer ,Goat ,Cabbage | Wolf
+  Now right bank has Wolf alone (safe); left has Farmer ,Goat ,Cabbage with farmer present (safe).
+
+5.Farmer takes Cabbage to Right. 
+  Goat | Farmer ,Cabbage ,Wolf
+  Right has farmer, cabbage and wolf (safe because farmer is there), left has Goat alone (safe).
+
+6.Farmer returns alone to Left.
+  Farmer ,Goat | Cabbage ,Wolf
+  Right has Cabbage and Wolf together without farmer — that's safe (wolf doesn't eat cabbage). Left has farmer + goat.
+
+7.Farmer takes Goat to Right.
+  — | Farmer ,Wolf ,Goat ,Cabbage (all across safely)
