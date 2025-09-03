@@ -1,0 +1,17 @@
+Steps:
+
+1.Label the switches A, B, C.
+
+2.Turn A ON and leave it on for ~3–5 minutes.
+
+3.After that time, turn A OFF and immediately turn B ON.
+
+4.Walk into the room with the bulb (only one entry allowed).
+
+How to tell which switch is which
+
+1.If the bulb is lit, then B controls the bulb (B is currently on).
+
+2.If the bulb is dark but warm to the touch, then A controls the bulb (A was on long enough to heat it, then turned off).
+
+3.If the bulb is dark and cold, then C controls the bulb (it was never turned on).
