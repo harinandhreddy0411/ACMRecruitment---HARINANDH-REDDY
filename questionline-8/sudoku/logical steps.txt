@@ -1,0 +1,21 @@
+I use the notation rRcC (row R column C).
+
+Look at column 1: it already has 3 at r3c1. The column must contain {1,2,4} in the remaining cells.
+
+r2 cannot be 1 (row2 already has 1 at r2c4).
+
+r4 cannot be 1 (row4 already has 1 at r4c2).
+Therefore the only place left for 1 in column 1 is r1c1.
+⇒ r1c1 = 1.
+
+Fill consequences:
+
+Top-left 2×2 box (r1-2, c1-2) now has {1,3} placed, so its remaining two cells (r1c2, r2c1) must be {2,4} in some order.
+
+Top-right box (r1-2, c3-4) already has {3 (r1c3), 1 (r2c4)} so its remaining cells (r1c4, r2c3) are {2,4} in some order.
+
+Bottom-left box (r3-4, c1-2) already has {3 (r3c1), 1 (r4c2)} so the remaining (r3c2, r4c1) are {2,4} in some order.
+
+Column 2 has 3 (r2c2) and 1 (r4c2), so r1c2 and r3c2 are {2,4}.
+
+Important box-level observation: bottom-right box (r3-4,c3-4) has no 1 yet, but row4 already contains 1 (at r4c2), so the 1 in that bottom-right box must be in row 3 — i.e. r3c3 or r3c4 = 1.
