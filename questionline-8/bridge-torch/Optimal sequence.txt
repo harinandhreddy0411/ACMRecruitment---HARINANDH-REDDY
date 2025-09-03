@@ -1,0 +1,25 @@
+Optimal sequence (total = 17 minutes)
+
+1.A and B cross → 2 minutes (A,B on far side; C,D on near side)
+Total so far: 2
+
+2.A returns → 1 minute (A back; B on far side)
+Total so far: 3
+
+3.C and D cross → 10 minutes (C,D on far side; B waiting there; A on near side)
+Total so far: 13
+
+4.B returns → 2 minutes (B back; C,D on far side)
+Total so far: 15
+
+5.A and B cross → 2 minutes (A,B join C,D on far side)
+
+Total final: 17 minutes
+
+Reasoning:
+
+A and B ferry first (A+B go, A returns), then C and D go together, then B returns — cost = A + 2*B + D.
+
+Method cost = 1 + 2*2 + 10 = 15 
+
+Add the initial crossing needed to set up this Method (A & B cross first for 2), and the final crossing (A & B cross again for 2). The whole-plan arithmetic leads to total 17; any alternative plan ends up at least 17 or worse. Thus 17 is minimal.
