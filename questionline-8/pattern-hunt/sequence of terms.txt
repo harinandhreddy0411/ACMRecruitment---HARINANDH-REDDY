@@ -1,0 +1,19 @@
+1.Each term is the product of two consecutive numbers:
+
+𝑎n= n*(n+1)
+1*2=2
+2*3=6
+3*4=12
+4*5=20
+so the next two terms are :
+5*6=30
+6*7=42
+(30,42)
+
+2.The difference between the numbers is also following a pattern we can also find them through this :
+6-2=4
+12-6=6
+20-12=8
+30-20=10
+42-30=12
+so the next two numbers are : 30,42
