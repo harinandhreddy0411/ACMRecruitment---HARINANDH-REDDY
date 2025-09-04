@@ -1,0 +1,155 @@
+Notes and commands used in reaching level 10:
+
+Level 0-1:
+
+1.Login to bandit0
+ code: ssh bandit0@bandit.labs.overthewire.org -p 2220
+2.Check the files in the home directory
+ code: ls
+3.View the contents of the file-readme
+ code: cat readme
+4.Note the password, Logout and login as bandit1 
+ code: exit
+      ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+Level 1-2:
+
+1.When you login as bandit1,run:
+ code: ls
+2.There will be a file named "-"
+3.Read the file:
+ code: cat ./-
+4.Copy the password
+5.Exit and login to level 2 with the new password
+ code: exit
+     ssh bandit2@bandit.labs.overthewire.org -p 2220
+
+
+Level 2-3:
+
+1.When you login as bandit2,run:
+ code: ls
+2.There will be a file named "--spaces in this filename--"
+3.Read the file:
+ code: cat ./--spaces\ in\ this\ filename--
+4.Copy the password
+5.Exit and login to level 3 with the new password
+ code: exit
+      ssh bandit3@bandit.labs.overthewire.org -p 2220
+
+Level 3-4 :
+
+1.When you login as bandit3,run:
+ code: ls -la
+2.There will be a file named "./inhere/...Hiding-From-You"
+3.Read the file
+ code:cat inhere/...Hiding-From-You
+4.copy the password
+5.Exit and login to level 4 with the new password
+ code: exit
+    ssh bandit4@bandit.labs.overthewire.org -p 2220
+
+
+Level 4-5 :
+
+1.When you login as bandit4,run:
+ code: cd inhere
+      ls -la
+2.You need to go the directory named inhere as the password is stored in it.
+3.You will see a lot of files but identify the human-readable file
+  code: file ./*
+4.Read the file
+ code: cat file07
+5.Exit and login to level 5 with the new password
+ code: exit
+    ssh bandit5@bandit.labs.overthewire.org -p 2220
+
+
+Level 5-6 :
+
+1.When you login as bandit5, move into the directory inhere 
+ code: cd inhere
+2.Use find to filter files by size 
+ code : find . -type f -size 1033c ! -executable
+3.It returns a single file named ./maybehere07/.file2
+4.Read the file 
+ code: cat cat ./maybehere07/.file2
+5.Exit and login to level 6 with the new password
+ code: exit
+    ssh bandit6@bandit.labs.overthewire.org -p 2220
+
+Level 6-7 :
+
+1.When you login as bandit6,use find to locate it
+It’s located in the /var/lib/dpkg/info/ or /etc/bandit_pass/ area
+ code: find / -user bandit7 -group bandit7 -type f 2>/dev/null
+2.It returns like something "/var/lib/dpkg/info/bandit7.password"
+3.Read the file
+ code: cat /var/lib/dpkg/info/bandit7.password
+4.Exit and login to level 7 with the new password
+ code: exit
+    ssh bandit7@bandit.labs.overthewire.org -p 2220
+
+Level 7-8 :
+
+1.When you login as bandit7,it is stored in the file data.txt and is next to word millionth.
+2.Check the file
+ code: ls
+  You should see data.txt
+3.Search the keyword
+ code: grep millionth data.txt
+4.You will get the password as the output
+5.Exit and login to level 8 with the new password
+ code: exit
+    ssh bandit8@bandit.labs.overthewire.org -p 2220
+
+
+Level 8-9 :
+
+1.The password is stored in the file data.txt.
+2.Inspect the file
+ code: ls
+3.Find the unique line
+ code: sort data.txt | uniq -u
+4.You will get the password as the output
+5.Exit and login to level 9 with the new password
+ code: exit
+    ssh bandit9@bandit.labs.overthewire.org -p 2220
+
+Level 9-10 :
+
+1.Check the file after login
+ code: ls
+2.Extract the readable strings.
+ code: strings data.txt
+3.We know the password will look like a 32-character alphanumeric string (similar to previous ones).
+So filter with grep
+ code: strings data.txt | grep -E '[a-zA-Z0-9]{32}'
+4.You will get the password as the output
+5.Exit and login to level 10 with the new password
+ code: exit
+    ssh bandit10@bandit.labs.overthewire.org -p 2220
+
+
+
+
+
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+     
+
+      
+
+
+
