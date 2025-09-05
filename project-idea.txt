@@ -1,0 +1,1 @@
+My project idea: Build a CLI tool for task management.
