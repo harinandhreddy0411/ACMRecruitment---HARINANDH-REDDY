@@ -6,7 +6,7 @@ Left-start and right-end
   Farmer , Wolf ,Cabbage | Goat
 
 3.Farmer takes Wolf to Right.
-  Cabbage | Farmer ,Wolf ,Goat ← temporarily farmer and wolf on Right with goat also there — that would be bad if farmer left them, so we          immediately do step 4.
+  Cabbage | Farmer ,Wolf ,Goat ← temporarily farmer and wolf on Right with goat also there — that would be bad if farmer left them, so we immediately do step 4.
 
 4.Farmer brings Goat back to Left.
   Farmer ,Goat ,Cabbage | Wolf
@@ -21,4 +21,5 @@ Left-start and right-end
   Right has Cabbage and Wolf together without farmer — that's safe (wolf doesn't eat cabbage). Left has farmer + goat.
 
 7.Farmer takes Goat to Right.
+
   — | Farmer ,Wolf ,Goat ,Cabbage (all across safely)
